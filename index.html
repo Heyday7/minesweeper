@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./styles.css"/>
+    </head>
+    <body>
+        <div id='game'>
+            <h1>Mine Sweeper</h1>
+            <div id='beforeStart'>
+              <h3>가로와 세로는 5~30 사이의 숫자로, 지뢰갯수는 (가로 x 세로)보다 작게 입력해주세요!</h3>
+              <div class='inputRow'>
+                <label for="width">가로 길이를 입력하세요</label>
+                <input id='width'/>
+              </div>
+              <div class='inputRow'>
+                <label for='height'>세로 길이를 입력하세요</label>
+                <input id='height'/>
+              </div>
+              <div class='inputRow'>
+                <label for="numMine">지뢰 갯수를 설정하세요</label>
+                <input id='numMine'/>
+              </div>
+              <button id='start'>game start</button>
+            </div>
+            <h2 id='gameResult'></h2>
+            <div id='gameContainer'>
+              <div id='inGame' class='hidden'>
+                <div class='aboutGame'>
+                  <div class='block flagged'></div>
+                  <div id='flagRemain' ></div>
+                </div>
+                <button id='restart' class='aboutGame'>Restart?</button>
+                <div class='aboutGame'>
+                  <div class='block'>Time</div>
+                  <div id='timer'>0</div>
+                </div>
+              </div>
+              <div id="gameBoard">
+              </div>
+            </div>
+        </div>
+        <script src="game.js"></script>
+    </body>
+</html>
