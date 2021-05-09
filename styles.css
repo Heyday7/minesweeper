@@ -1,0 +1,112 @@
+#game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: greenyellow;
+}
+
+#beforeStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputRow {
+  margin:16 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width:fit-content;
+  margin:auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#inGame {
+  background-color:skyblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin:24 0;
+}
+
+.block {
+  border: 1px solid #ccc;
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+}
+
+.aboutGame {
+  border: 1px solid gray;
+  margin: 8px;
+  padding: 8px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutGame .block {
+  font-size: 16px;
+  margin-right: 8
+}
+
+.finished {
+  pointer-events: none;
+}
+
+.clicked {
+  background-color: rgba(0,0,0,0.3);
+  font-weight: 700;
+  text-align: center;
+}
+
+.mine {
+  background-image: url('https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/6b/9e/48/6b9e4893-4aa3-b100-fb06-a8609e49e592/source/200x200bb.jpg');
+  background-size: cover;
+}
+
+.flagged {
+  background-image:  url('https://w7.pngwing.com/pngs/337/559/png-transparent-minesweeper-computer-icons-bing-maps-video-game-mines-miscellaneous-game-angle-thumbnail.png');
+  background-size: cover;
+}
+
+.boom {
+  background-image: url('data:image/png;base64,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');
+  background-size: cover;
+}
+
+.num1 {
+  color: blue;
+}
+.num2 {
+  color: green;
+}
+.num3 {
+  color: red;
+}
+.num4 {
+  color: darkblue;
+}
+.num5 {
+  color: brown;
+}
+.num6 {
+  color: pink
+}
+.num7 {
+  color: yellow
+}
+.num8 {
+  color: white
+}
